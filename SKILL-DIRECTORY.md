@@ -1,9 +1,9 @@
 # AI Marketing System — Skill Directory
-*Последна проверка: 10.05.2026*
+*Последна проверка: 10.05.2026 | Обновен: 10.05.2026 (сесия 2)*
 
 ---
 
-## Общ статус: 30 skill folders | 30 с SKILL.md | 9 празни папки
+## Общ статус: 30 skill folders | 32 с SKILL.md | 7 празни папки
 
 ---
 
@@ -12,18 +12,19 @@
 ### 🔵 SYSTEM
 | Skill | Описание | Последна промяна |
 |-------|----------|-----------------|
-| `start` | Входна точка — зарежда Brand DNA, показва меню, рутира | Оригинален |
+| `start` | **MASTER ORCHESTRATOR** — пълно меню (27 продукта), рутира към всичко | ✅ ОБНОВЕН (10.05.2026) |
 | `brand-dna` | 15-частна структура, Drive-first extraction, 6 стъпки | ✅ ОБНОВЕН (10.05.2026) |
 | `quality-check` | Frank Kern оценка 0-10, итерира до 8+. Работи за всичко | Оригинален |
 
 ### 🟢 CHALLENGE CHAIN
 | Skill | Описание | Последна промяна |
 |-------|----------|-----------------|
+| `challenge-builder` | **CHAIN MANAGER** — orchestrates целия challenge цикъл, state tracking | ✅ НОВ (10.05.2026) |
 | `challenge-concept` | Challenge name + Belief Ladder + 3-day arc + VIP + bump | ✅ Belief Ladder добавен |
 | `challenge-landing` | **ПЪЛНА 6-PAGE FUNNEL** — free landing + VIP + checkout + 3 TY pages | ✅ ОБНОВЕН (10.05.2026) |
 | `challenge-posts` | 5-8 promo posts + 20+ hooks за регистрации | Оригинален |
 | `challenge-ads` | Ad copy + Gemini visual prompts + video scripts | Оригинален |
-| `challenge-emails` | Email sequences: регистрирани + не-регистрирани + VIP | ⚠️ Непълен (липсват bump + scarcity + reminder имейли) |
+| `challenge-emails` | **ПЪЛЕН** — 6 последователности: A регистрирани, B не-регистрирани, C VIP, D bump, E scarcity, F reminders | ✅ ОБНОВЕН (10.05.2026) |
 | `challenge-days` | Дневни описания — coach guide за всеки ден | Оригинален |
 | `challenge-script` | Offer close script за финалния ден | Placeholder |
 
@@ -85,13 +86,11 @@
 
 | Папка | Вероятно предназначение | Приоритет |
 |-------|------------------------|-----------|
-| `challenge-builder` | Orchestrator за целия challenge chain | 🟡 Medium |
 | `challenge-vip` | Остатък от стара структура — superseded от challenge-landing | 🔴 Delete or archive |
 | `email-sales` | Sales email (за след offer/sales call) | 🟡 Medium |
 | `email-sequence` | Generic имейл последователности | 🟡 Medium |
 | `email-singles` | Single promotional emails | 🟢 Low |
 | `email-webinar` | Имейли за webinar (duplicate на webinar-emails?) | 🔴 Check if duplicate |
-| `email-welcome` | Welcome sequence за нови абонати | 🟡 Medium |
 | `landing-page` | Generic landing page (не campaign-specific) | 🟡 Medium |
 | `lead-magnet` | Вероятно orchestrator — lead-magnet-concept го замества | 🔴 Check if needed |
 | `posts` | Generic posts skill — post-* skills го заместват? | 🔴 Check if needed |
@@ -102,9 +101,9 @@
 
 | Gap | Статус | Бележка |
 |-----|--------|---------|
-| challenge-emails — bump offer имейли (3-5) | ❌ Липсва | Нужно |
-| challenge-emails — scarcity имейли (2) | ❌ Липсва | Нужно |
-| challenge-emails — reminder имейли (4, по 1 на ден) | ❌ Липсва | Нужно |
+| challenge-emails — bump offer имейли (3-5) | ✅ Добавено (Sequence D) | Готово |
+| challenge-emails — scarcity имейли (2) | ✅ Добавено (Sequence E) | Готово |
+| challenge-emails — reminder имейли (по 1 на ден) | ✅ Добавено (Sequence F) | Готово |
 | challenge-ads — enforce 6-8 angles минимум | ⚠️ Не е enforced | Minor |
 | quality-check — challenge-specific checklist | ⚠️ Генеричен | Minor |
 
@@ -123,16 +122,17 @@
 ## 🗺️ COMPLETE SKILL MAP
 
 ```
-/start
+/start (master orchestrator — 27 products)
 │
 ├── CHALLENGE CHAIN
-│   ├── /challenge-concept      ← Belief Ladder + 3-day arc
-│   ├── /challenge-landing      ← 6-page funnel (free + VIP + checkout + 3 TY)
-│   ├── /challenge-posts        ← 5-8 promo posts
-│   ├── /challenge-ads          ← ad copy + visuals + video
-│   ├── /challenge-emails       ← ⚠️ incomplete (missing bump/scarcity/reminders)
-│   ├── /challenge-days         ← daily coach guide
-│   └── /challenge-script       ← offer close script (placeholder)
+│   ├── /challenge-builder      ← chain manager (orchestrates all 7 steps, state tracking)
+│   │   ├── /challenge-concept      ← Belief Ladder + 3-day arc
+│   │   ├── /challenge-landing      ← 6-page funnel (free + VIP + checkout + 3 TY)
+│   │   ├── /challenge-posts        ← 5-8 promo posts
+│   │   ├── /challenge-ads          ← ad copy + visuals + video
+│   │   ├── /challenge-emails       ← ✅ full: A registered, B cold, C VIP, D bump, E scarcity, F reminders
+│   │   ├── /challenge-days         ← daily coach guide
+│   │   └── /challenge-script       ← offer close script (placeholder)
 │
 ├── WEBINAR CHAIN
 │   ├── /webinar-concept        ← topic + teaching + offer moment
@@ -147,6 +147,12 @@
 │   ├── /lead-magnet-landing    ← opt-in + TY page
 │   ├── /lead-magnet-posts      ← 3-5 promo posts
 │   ├── /lead-magnet-ads        ← ad copy + visuals
+│   └── /lead-magnet-emails     ← welcome + 4 nurture
+│
+├── EMAIL TOOLS
+│   ├── /email-welcome          ← ✅ NEW: 5-email evergreen welcome sequence
+│   ├── /challenge-emails       ← (see challenge chain)
+│   ├── /webinar-emails         ← pre + post sequences
 │   └── /lead-magnet-emails     ← welcome + 4 nurture
 │
 ├── STANDALONE TOOLS
@@ -170,6 +176,7 @@
 
 ## ✅ RECENTLY UPDATED (10.05.2026)
 
+### Сесия 1
 1. **`brand-dna/SKILL.md`** — Drive-first, 15-part structure, targets webinar/sales call transcripts
 2. **`challenge-landing/SKILL.md`** — Complete 6-page funnel (was just a landing page stub)
 3. **`webinar-landing/SKILL.md`** — File index system, hard-coded standards, section-by-section building
@@ -177,6 +184,13 @@
 5. **`05-Prompts/06-webinar/05-webinar-landing-page-builder.md`** — Raw prompt saved
 6. **`05-Prompts/07-challenge/01-challenge-funnel-builder-complete.md`** — Raw prompt saved
 
+### Сесия 2 (продължение)
+7. **`start/SKILL.md`** — REWRITE: Master orchestrator, 27 products in menu, full routing
+8. **`challenge-builder/SKILL.md`** — NEW: Challenge chain manager, state tracking, step-by-step routing
+9. **`email-welcome/SKILL.md`** — NEW: 5-email evergreen welcome sequence (trust → authority → offer)
+10. **`challenge-emails/SKILL.md`** — COMPLETE: Added Sequence D (bump), E (scarcity), F (daily reminders)
+11. **`SKILL-DIRECTORY.md`** — Updated status counts and known gaps
+
 ---
 
-*Generated: 10.05.2026*
+*Generated: 10.05.2026 | Updated: 10.05.2026 (сесия 2)*
